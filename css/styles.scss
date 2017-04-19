@@ -12,8 +12,6 @@ html, body{
 
 body{
     font-family: "Helvetica Neue", Helvetica, Verdana, Tahoma, Arial, sans-serif;
-    background: url(../img/insurance.jpg) no-repeat center top;
-    background-size: cover;
     color: #fff;
 }
 
@@ -21,31 +19,45 @@ body{
     min-height: 100%;
     padding-bottom: 100px;
     overflow: hidden;
-    background: rgba(50,50,50,0.7);
 }
 
 .footer{
-    height: 50px;
+    height: 100px;
     margin-top: -100px;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .container{
-    max-width: 970px;
+    max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
+h1{
+    font-size: 52px;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
 
 h2{
     font-size: 26px;
     text-align: center;
     margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.header{
+    background: #3F8CB8;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .main{
     p{
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 26px;
         margin-bottom: 20px;
         &:last-child{
             margin-bottom: 0;
@@ -54,8 +66,16 @@ h2{
 }
 
 .footer{
+    background: #0A707F;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
     p{
         font-size: 14px;
+        line-height: 20px;
+        strong{
+            color: #E11E0A;
+        }
     }
 }
 
@@ -63,10 +83,131 @@ h2{
     text-align: center;
 }
 
+.row{
+    &::before, &::after{
+        display: table;
+        content: "";
+    }
+    &::after{
+        clear: both;
+    }
+}
+
+.header-left{
+    float: left;
+    width: 50%;
+}
+
+.header-right{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
 ul{
     li{
         list-style-type: none;
         padding-left: 20px;
-        background: url(../img/list-item.png) no-repeat left 5px;
+        background: url(../img/list-item.png) no-repeat left 8px;
+        line-height: 28px;
+        font-size: 20px;
     }
+}
+
+.header-icons{
+    color: #fff;
+    text-decoration: none;
+    padding-left: 34px;
+    line-height: 34px;
+    height: 34px;
+    display: inline-block;
+    font-weight: bold;
+    background-color: transparent;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+
+.phone{
+    @extend .header-icons;
+    background-image: url(../img/phone.png);
+    
+    &:hover{
+        color: #fff;
+        text-decoration: none;
+    
+    }
+}
+
+.location{
+    @extend .header-icons;
+    background-image: url(../img/location.png);
+}
+
+.time{
+    @extend .header-icons;
+    background-image: url(../img/clock.png);
+}
+
+.first-request{
+    background: url(../img/insurance.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.first-request-inner{
+    height: 500px;
+    padding-top: 200px;
+    background: rgba(0,0,0,0.5);
+}
+
+.main-subtitle{
+    font-size: 24px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+}
+
+.advantage-wrap{
+    background: url(../img/advantage.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.advantage-inner{
+    padding: 20px 0 40px;
+    background: rgba(0,0,0,0.2);
+}
+
+.advantage{
+    font-size: 0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.advantage-item{
+    display: inline-block;
+    width: 33.33%;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+.adv-item-title{
+    margin-top: 10px;
+}
+
+.required{
+    background: #edf6fc;
+    padding: 20px 0 40px;
+    color: #2c3e50;
+}
+
+.else{
+    color: #2c3e50;
+    padding: 20px 0 40px;
+}
+
+.other-types{
+    background: #edf6fc;
+    padding: 20px 0 40px;
+    color: #2c3e50;
 }
